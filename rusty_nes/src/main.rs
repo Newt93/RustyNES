@@ -53,6 +53,7 @@ pub fn interpret(&mut self, program: Vec<u8>) {
                     self.status = self.status & 0b0111_1111;
                 }
             }
+            // BRK Code
             0x00 => {
                 return;
             } 
