@@ -15,7 +15,7 @@ impl Memory {
     }
 
     pub fn read_word_pair(&self, addr: u16) -> u16 {
-        // little-endian fusion of two bytes into a word
+        // creating a word pair from two words
         ((self.data[addr.wrapping_add(1) as usize] as u16) << 8) | (self.data[addr as usize] as u16)
     }
 
